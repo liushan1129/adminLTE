@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>管理平台</title>
+    <!--#include file="/pages/frame/header.html"-->
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <!--#include file="/pages/frame/top.html"-->
+        <!--#include file="/pages/frame/left.html"-->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    员工管理
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> 人员管理</a></li>
+                    <li class="active">员工管理</li>
+                </ol>
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <form role="form" id="userSearchForm">
+                                    <div class="box-body">
+                                        <div class="form-group col-xs-12">
+                                            <div class="col-xs-4">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="s_userName" name="userName" placeholder="用户名" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-phone"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="s_mobile" name="mobile" placeholder="联系方式" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-address-card"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="s_address" name="address" placeholder="地址" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xs-12">
+                                            <div class="col-xs-4">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control pull-right" id="reservation" placeholder="日期" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <input type="button" id="searchBtn" class="btn btn-primary pull-right" style="width: 100px;" value="搜索"></input>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <input type="button" id="clearBtn" class="btn btn-default"  style="width: 100px;" value="清空"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="userTab" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>姓名</th>
+                                        <th>联系电话</th>
+                                        <th>地址</th>
+                                        <th>添加时间</th>
+                                        <th>添加人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>姓名</th>
+                                        <th>联系电话</th>
+                                        <th>地址</th>
+                                        <th>添加时间</th>
+                                        <th>添加人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <!--#include file="/pages/frame/bottom.html"-->
+        <!--#include file="/pages/frame/control-sidebar.html"-->
+        <!--#include file="editUser.html"-->
+    </div>
+
+</body>
+<!--#include file="/pages/frame/js.html"-->
+<!-- DataTables -->
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!--&lt;!&ndash; Select2 &ndash;&gt;-->
+<!--<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>-->
+<!--&lt;!&ndash; InputMask &ndash;&gt;-->
+<!--<script src="../../plugins/input-mask/jquery.inputmask.js"></script>-->
+<!--<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>-->
+<!--<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>-->
+<!-- date-range-picker -->
+<script src="../../bower_components/moment/min/moment.min.js"></script>
+<script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<!--<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>-->
+<!-- bootstrap color picker -->
+<!--<script src="../../bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>-->
+<!-- bootstrap time picker -->
+<!--<script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>-->
+<!-- SlimScroll -->
+<!--<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>-->
+<!-- iCheck 1.0.1 -->
+<!--<script src="../../plugins/iCheck/icheck.min.js"></script>-->
+<!-- FastClick -->
+<!--<script src="../../bower_components/fastclick/lib/fastclick.js"></script>-->
+<!-- AdminLTE App -->
+<!--<script src="../../dist/js/adminlte.min.js"></script>-->
+<!-- AdminLTE for demo purposes -->
+<!--<script src="../../dist/js/demo.js"></script>-->
+<script src="/js/user.js"></script>
+<script>
+    // $(function () {
+    //     $('#userTab').DataTable({
+    //         'paging'      : true,
+    //         'lengthChange': false,
+    //         'searching'   : false,
+    //         'ordering'    : true,
+    //         'info'        : true,
+    //         'autoWidth'   : false
+    //     })
+    // })
+</script>
+</html>
